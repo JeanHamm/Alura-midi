@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Alura</title>
+</head>
+<body>
+    <script>
+        function mostre(texto) {
+            document.write(texto);
+        };
+        function pontos(vitorias, empates){
+            var resultado;
+            return (vitorias * 3) + parseInt(empates);
+        };
+    
+        var pontosPassados = prompt("Qual foi a pontuação do time ano passado?");
+        var vitorias = prompt("Quantas Vitorias?");
+        var empates = prompt("Quantos empates?");
+        var pontosAtuais = pontos(vitorias, empates);
+
+        mostre("Pontos atuais " + pontosAtuais + "<br>");
+
+        if(pontosAtuais > pontosPassados){
+            mostre("Seus time está melhor que o ano passado");
+        }
+        if(pontosAtuais < pontosPassados){
+            mostre("Seus time está pior que o ano passado");
+        }
+        if(pontosAtuais == pontosPassados){
+            mostre("Seus time está igual o ano passado");
+        }
+
+
+
+
+    </script>
+</body>
+</html>
