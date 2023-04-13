@@ -9,33 +9,17 @@
 <body>
     <script>
         function mostre(texto) {
-            document.write(texto);
+            document.write(texto + "<br><br>");
         };
-        function pontos(vitorias, empates){
-            var resultado;
-            return (vitorias * 3) + parseInt(empates);
-        };
-    
-        var pontosPassados = prompt("Qual foi a pontuação do time ano passado?");
-        var vitorias = prompt("Quantas Vitorias?");
-        var empates = prompt("Quantos empates?");
-        var pontosAtuais = pontos(vitorias, empates);
-
-        mostre("Pontos atuais " + pontosAtuais + "<br>");
-
-        if(pontosAtuais > pontosPassados){
-            mostre("Seus time está melhor que o ano passado");
+        function aletorio(){
+            return Math.round(Math.random() * 20);
         }
-        if(pontosAtuais < pontosPassados){
-            mostre("Seus time está pior que o ano passado");
+        var base = parseInt(prompt("Escolhea a taboada que você quer ver"));
+        
+       for(var multiplicador = 0; multiplicador <= 10; multiplicador++){
+            var soma = base * multiplicador;
+            mostre(base + " + " + multiplicador + " = " + soma);
         }
-        if(pontosAtuais == pontosPassados){
-            mostre("Seus time está igual o ano passado");
-        }
-
-
-
-
     </script>
 </body>
 </html>
