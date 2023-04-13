@@ -7,19 +7,23 @@
     <title>Estudo Alura</title>
 </head>
 <body>
+    <h1>Extreva um número de 0 a 10</h1>
+    <input type="text">
+    <button>Clique aqui para enviar</button>
+
     <script>
         function mostre(texto) {
             document.write(texto + "<br><br>");
         };
         function aletorio(){
-            return Math.round(Math.random() * 20);
+            return Math.round(Math.random() * 10);
         }
-        var base = parseInt(prompt("Escolhea a taboada que você quer ver"));
+
+        var segredos = [5, 7, 10, 2];
+        alert(segredos[0]);
+
+
         
-       for(var multiplicador = 0; multiplicador <= 10; multiplicador++){
-            var soma = base * multiplicador;
-            mostre(base + " + " + multiplicador + " = " + soma);
-        }
     </script>
 </body>
 </html>
